@@ -12,8 +12,8 @@ namespace Week5.LibrettoADO
             IRepositoryEsame repoEsami = new RepositoryEsame(); 
             foreach (var es in repoEsami.GetAll())
             {
-                Console.WriteLine("ID: {0} Nome: {1} Voto: {2} DataEsame Esito: {3}" +
-                    "Quantita' Magazzino: {4}",
+                Console.WriteLine("ID: {0} Nome: {1} Voto: {2} DataEsame {3}" +
+                    "Esito: {4}",
                     es.Nome, es.CFU, es.Voto, es.DataEsame, es.Esito);
             }
             
