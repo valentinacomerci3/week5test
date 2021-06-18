@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Week5.LibrettoADO.Entities;
 using Week5.LibrettoADO.Repositories;
 
-namespace Week5.BibliotecaADO
+namespace Week5.LibrettoADO
 {
     class Program
     {
@@ -12,9 +12,9 @@ namespace Week5.BibliotecaADO
             IRepositoryEsame repoEsami = new RepositoryEsame(); 
             foreach (var es in repoEsami.GetAll())
             {
-                Console.WriteLine("ISBN: {0} Titolo: {1} Autore: {2} Numero Pagine: {3}" +
+                Console.WriteLine("ID: {0} Nome: {1} Voto: {2} DataEsame Esito: {3}" +
                     "Quantita' Magazzino: {4}",
-                    es.Nome, es.CFU, es.Voto, es.DataEsame, es.Esito,es.Studente);
+                    es.Nome, es.CFU, es.Voto, es.DataEsame, es.Esito);
             }
             
             Esame esame = new Esame()
@@ -24,7 +24,7 @@ namespace Week5.BibliotecaADO
                 DataEsame = new DateTime(12/12/12),
                 Voto = 27,
                 Esito = "positivo",
-                Studente = 25,
+                
             };
 
            
